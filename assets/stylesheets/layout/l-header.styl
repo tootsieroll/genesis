@@ -1,5 +1,6 @@
 .l-header
   position fixed
+  z-index 200
   top 0
   left rem(80px)
   right 0
@@ -14,6 +15,9 @@
     f-size('roman', 16px, 84px)
     margin-top rem(10px)
     text-align center
+    display none
+    @media all and (min-width: $screen-sm)
+      display block
   &__social .menu
     justify-content flex-end!important
     margin-top rem(10px)
@@ -35,7 +39,7 @@
 
   .logotype
     width rem(225px)
-    padding rem(0 31px 0 42px)
+    padding rem(25px 31px 25px 42px)
     box-sizing border-box
     > a
       display block
@@ -50,7 +54,8 @@
 
   .page-title
     border-left 1px solid white
-    f-size('thin', 36px, 52px)
+    f-size('thin', 36px, 50px)
     padding-left rem(34px)
+    margin-top rem(5px)
 
 

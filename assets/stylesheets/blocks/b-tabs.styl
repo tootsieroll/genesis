@@ -1,0 +1,55 @@
+.b-tabs
+  overflow hidden
+  height rem(786px)
+  &-content
+    display flex
+    flex-flow row wrap
+    justify-content flex-start
+    align-items flex-start
+    position relative
+    width rem(1300px)
+    transform translate3d(0, rem(-260px), 0) rotate(-45deg)
+    transform-origin center
+    transform-style preserve-3D
+    margin 0 auto
+  &-item
+    width rem(300px)
+    height rem(300px)
+    margin rem(5px)
+    display block
+    overflow hidden
+    position relative
+    &.fake
+      cursor default
+      &.dark
+        background alpha(black, .88)
+    &:hover, &.active
+      .b-tabs-item__bg
+        opacity .7
+    &__inner
+      position absolute
+      top 50%
+      left 50%
+      transform translate3d(-50%, -50%, 0) rotate(45deg)
+      text-align center
+      width rem(426px)
+      height rem(426px)
+      color white
+      background black
+    &__bg
+      width 100%
+      height 100%
+      background-repeat no-repeat
+      background-position center
+      background-size cover
+      opacity .2
+      transition opacity 700ms $base-timing-function
+    &__text
+      color white
+      f-size('thin', 30px, 42px)
+      text-align center
+      position absolute
+      top 50%
+      left 50%
+      width rem(400px)
+      transform translate3d(-50%, -50%, 0)

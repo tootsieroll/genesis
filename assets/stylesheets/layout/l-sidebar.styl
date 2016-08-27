@@ -1,5 +1,6 @@
 .l-sidebar
   position fixed
+  z-index 200
   top 0
   left 0
   bottom 0
@@ -9,9 +10,29 @@
 
 
   &__phone
-    transform(rotate(-90deg))
+    position absolute
+    left 0
+    right 0
+    bottom rem(48px)
+    transform rotate(-90deg)
     .phone
       white-space nowrap
       f-size('thin', 30px, 80px)
       strong
         f-size('medium', 30px, 80px)
+
+  &__menu
+    text-align center
+    position absolute
+    top 50%
+    left 0
+    right 0
+    transform translate3d(0, -60%, 0)
+    .menu .item
+      margin-bottom rem(6px)
+
+  .menu-button
+    text-transform lowercase
+    f-size('medium', 14px, 16px)
+    display block
+    padding rem(22px 19px 10px)

@@ -1,0 +1,53 @@
+.b-text
+  position relative
+  width rem(863px)
+  margin 0 auto
+  background url("/images/pattern.png") repeat-y 0 0
+  background-size 100% auto
+  min-height rem(900px)
+  overflow auto
+  &-header
+    &__top
+      padding rem(70px 110px)
+    &__feedback
+      height rem(350px)
+      background #515556
+      color white
+      f-size('thin', 40px, 50px)
+      padding rem(70px 20px 80px 340px)
+      position relative
+      &-inner
+        position relative
+        width 100%
+        height 100%
+      &:before
+        content ''
+        display block
+        position absolute
+        z-index 10
+        width rem(300px)
+        background #ec723b
+        top 0
+        left 0
+        bottom 0
+      &:after
+        content ''
+        display block
+        position absolute
+        z-index 15
+        top rem(90px)
+        left rem(70px)
+        background url("/images/phone.png") no-repeat center
+        background-size 100% auto
+        width rem(173px)
+        height rem(174px)
+      p
+        display block
+        position absolute
+        top 50%
+        left 50%
+        transform translate3d(-50%, -50%, 0)
+        width rem(485px)
+  &-body
+    padding rem(70px 110px)
+

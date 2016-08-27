@@ -21,11 +21,10 @@ $line-height-base = 24px
 $font-weight-stack = {
   'medium': 500,
   'roman': 400,
-  'thin': 300
+  'thin': 100
 }
 
 f-size($type = 'roman', $font-size = $font-size-base, $line-height = $line-height-base)
-  font-family: 'helveticaneuecyr' + $type, font-stack('Helvetica')
   font-size: rem($font-size)
   font-weight: $font-weight-stack[$type]
   line-height: unit($line-height / $font-size, '')

@@ -39,7 +39,7 @@ module.exports = function(grunt) {
                      'watch'
                     ]);
 
-  grunt.registerTask('deploy', ['build', 'ssh_deploy:production']);
+  grunt.registerTask('deploy', ['build', 'ssh_deploy:staging']);
   // grunt.registerTask('deploy:prod', ['build', 'ssh_deploy:production']);
 
   // Worker task
