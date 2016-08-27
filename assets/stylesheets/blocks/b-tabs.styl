@@ -12,6 +12,9 @@
     transform-origin center
     transform-style preserve-3D
     margin 0 auto
+    @media all and (max-width: 500px)
+      width rem(840px)
+      transform translate3d(0, rem(90px), 0) rotate(-45deg)
   &-item
     width rem(300px)
     height rem(300px)
@@ -19,6 +22,9 @@
     display block
     overflow hidden
     position relative
+    @media all and (max-width: 500px)
+      width rem(200px)
+      height rem(200px)
     &.fake
       cursor default
       &.dark

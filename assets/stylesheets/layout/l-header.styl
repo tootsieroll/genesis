@@ -18,23 +18,26 @@
     display none
     @media all and (min-width: $screen-sm)
       display block
-  &__social .menu
-    justify-content flex-end!important
-    margin-top rem(10px)
-    f-size('roman', 16px, 84px)
-    padding-right rem(76px)
-    .item
-      flex 0!important
-      margin rem(0 5px)
-      > a
-        font-size 0
-        .s-icon
-          &-facebook
-            margin-top rem(2px)
-          &-vkontakte
-            margin-top rem(4px)
-          &-google
-            margin-top rem(6px)
+  &__social
+    display flex
+    justify-content flex-end
+    .menu
+      justify-content flex-end!important
+      margin-top rem(10px)
+      f-size('roman', 16px, 84px)
+      padding-right rem(76px)
+      width rem(300px)
+      .item
+        margin rem(0 5px)
+        > a
+          font-size 0
+          .s-icon
+            &-facebook
+              margin-top rem(2px)
+            &-vkontakte
+              margin-top rem(4px)
+            &-google
+              margin-top rem(6px)
 
 
   .logotype
