@@ -1,0 +1,145 @@
+doctype html
+html
+  head
+    title Genesis
+    base(href="/")
+    meta(charset="utf-8")
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel="stylesheet" type="text/css" href="/stylesheets/application.css")
+    script(src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js")
+    script
+      | window.jQuery || document.write('<script src="/javascripts/jquery.min.js"><\/script>');
+    script(src="/javascripts/application.js")
+  body
+    header.l-header
+      .l-header__inner.s-grid
+        .s-col.s-grid
+          h1.logotype
+            a(href="/") Genesis
+          .page-title Продукция
+        nav.l-nav.l-nav-horizontal.l-header__menu.s-col
+          ul.menu
+            li.item
+              a.link(href="javascript:;") Партнерам
+            li.item.selected
+              a.link(href="javascript:;") Застройщикам
+            li.item
+              a.link(href="javascript:;") Строителям
+            li.item
+              a.link(href="javascript:;") Девелоперам
+        .l-nav.l-nav-horizontal.l-header__social.s-col
+          ul.menu
+            li.item
+              a(href="javascript:;")
+                i.s-icon.s-icon-twitter Twitter
+            li.item
+              a(href="javascript:;")
+                i.s-icon.s-icon-linkedin LinkedIn
+            li.item
+              a(href="javascript:;")
+                i.s-icon.s-icon-facebook Facebook
+            li.item
+              a(href="javascript:;")
+                i.s-icon.s-icon-vkontakte Vkontakte
+            li.item
+              a(href="javascript:;")
+                i.s-icon.s-icon-google Google +
+    aside.l-sidebar
+      .l-sidebar__inner
+        .l-sidebar__top
+          a.menu-button(href="javascript:;")
+        .l-nav.l-nav-vertical.l-sidebar__menu
+          ul.menu
+            li.item
+              a(href="javascript:;")
+                i.s-icon.s-icon-search Поиск
+            li.item
+              a(href="javascript:;")
+                i.s-icon.s-icon-question Вопросы
+            li.item
+              a(href="javascript:;")
+                i.s-icon.s-icon-note Заметки
+            li.item
+              a(href="javascript:;")
+                i.s-icon.s-icon-info Информация
+            li.item
+              a(href="javascript:;")
+                i.s-icon.s-icon-phone Контакты
+            li.item
+              a(href="javascript:;")
+                i.s-icon.s-icon-location Карта
+        .l-sidebar__phone
+          a.phone(href="javascript:;")
+            | 8 (800)
+            strong  555-04-00
+    main.l-content
+      section.l-section.b-tabs
+        .b-tabs-content.masonry-grid
+          a.b-tabs-item.masonry-col(href="javascript:;")
+            .b-tabs-item__inner
+              .b-tabs-item__bg(style="background-image: url('/images/tabs/1.jpg')")
+              .b-tabs-item__text Производство ЛСТК
+          a.b-tabs-item.masonry-col(href="javascript:;")
+            .b-tabs-item__inner
+              .b-tabs-item__bg(style="background-image: url('/images/tabs/2.jpg')")
+              .b-tabs-item__text Проекты ЛСТК
+          a.b-tabs-item.masonry-col.fake
+          a.b-tabs-item.masonry-col.fake
+          a.b-tabs-item.masonry-col(href="javascript:;")
+            .b-tabs-item__inner
+              .b-tabs-item__bg(style="background-image: url('/images/tabs/3.jpg')")
+              .b-tabs-item__text Техдокументация ЛСТК
+          a.b-tabs-item.masonry-col(href="javascript:;")
+            .b-tabs-item__inner
+              .b-tabs-item__bg(style="background-image: url('/images/tabs/4.jpg')")
+              .b-tabs-item__text Монтаж ЛСТК
+          a.b-tabs-item.masonry-col(href="javascript:;")
+            .b-tabs-item__inner
+              .b-tabs-item__bg(style="background-image: url('/images/tabs/5.jpg')")
+              .b-tabs-item__text Продукция ЛСТК
+          a.b-tabs-item.masonry-col.fake
+          a.b-tabs-item.masonry-col.fake.dark
+          a.b-tabs-item.masonry-col(href="javascript:;")
+            .b-tabs-item__inner
+              .b-tabs-item__bg(style="background-image: url('/images/tabs/6.jpg')")
+              .b-tabs-item__text Технология ЛСТК
+          a.b-tabs-item.masonry-col(href="javascript:;")
+            .b-tabs-item__inner
+              .b-tabs-item__bg(style="background-image: url('/images/tabs/7.jpg')")
+              .b-tabs-item__text Система ЛСТК
+          a.b-tabs-item.masonry-col(href="javascript:;")
+            .b-tabs-item__inner
+              .b-tabs-item__bg(style="background-image: url('/images/tabs/8.jpg')")
+              .b-tabs-item__text Оборудование ЛСТК
+          a.b-tabs-item.masonry-col.fake.dark
+          a.b-tabs-item.masonry-col.fake.dark
+          a.b-tabs-item.masonry-col(href="javascript:;")
+            .b-tabs-item__inner
+              .b-tabs-item__bg(style="background-image: url('/images/tabs/9.jpg')")
+              .b-tabs-item__text Преимущества ЛСТК
+          a.b-tabs-item.masonry-col(href="javascript:;")
+            .b-tabs-item__inner
+              .b-tabs-item__bg(style="background-image: url('/images/tabs/10.jpg')")
+              .b-tabs-item__text Проектирование ЛСТК
+      section.l-section.b-text
+        header.b-text-header
+          .b-text-header__top
+            p Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).
+          .b-text-header__feedback
+            p Если у вас остались вопросы, наши специалисты всегда готовы вам помочь
+        .b-text-body
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,36 @@
+.s-grid
+	display flex
+	flex-flow row wrap
+	justify-content flex-start
+	align-items center
+	position relative
+
+.s-col
+	flex 1
+	position relative
+
+
+.s-grid.s-grid-third
+	align-items flex-start
+	justify-content space-between
+	@media all and (min-width: 1200px)
+		margin ks-rem(0 -15px)
+	.s-col
+		flex-basis 95%
+		margin 0 2%
+		@media all and (min-width: $phone)
+			flex-basis 45%
+		@media all and (min-width: 1200px)
+			flex-basis 30%
+			margin ks-rem(0 15px)
+
+.s-grid.s-grid-fourth
+	align-items flex-start
+	justify-content space-between
+	.s-col
+		flex-basis 46%
+		@media all and (min-width: $phone)
+			flex-basis 30%
+		@media all and (min-width: 1200px)
+			flex-basis 23%
+

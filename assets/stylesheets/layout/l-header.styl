@@ -1,0 +1,56 @@
+.l-header
+  position fixed
+  top 0
+  left rem(80px)
+  right 0
+  height rem(94px)
+  display block
+  background alpha(black, .35)
+  color white
+
+  &__inner
+    justify-content flex-start
+  &__menu
+    f-size('roman', 16px, 84px)
+    margin-top rem(10px)
+    text-align center
+  &__social .menu
+    justify-content flex-end!important
+    margin-top rem(10px)
+    f-size('roman', 16px, 84px)
+    padding-right rem(76px)
+    .item
+      flex 0!important
+      margin rem(0 5px)
+      > a
+        font-size 0
+        .s-icon
+          &-facebook
+            margin-top rem(2px)
+          &-vkontakte
+            margin-top rem(4px)
+          &-google
+            margin-top rem(6px)
+
+
+  .logotype
+    width rem(225px)
+    padding rem(0 31px 0 42px)
+    box-sizing border-box
+    > a
+      display block
+      text-indent: -99999px
+      overflow: hidden
+
+      width rem(152px)
+      height rem(43px)
+
+      background url("/images/logo.png") no-repeat 0 0
+      background-size 100% auto
+
+  .page-title
+    border-left 1px solid white
+    f-size('thin', 36px, 52px)
+    padding-left rem(34px)
+
+
