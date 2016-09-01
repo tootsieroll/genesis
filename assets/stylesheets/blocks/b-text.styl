@@ -2,13 +2,32 @@
   position relative
   width rem(863px)
   margin 0 auto
-  background url("/images/pattern.png") repeat-y 0 0
-  background-size 100% auto
+  // background url("/images/pattern.png") repeat-y 0 0
+  // background-size 100% auto
+  background white
   min-height rem(900px)
   overflow auto
   &-header
     &__top
       padding rem(70px 110px)
+      f-size('roman', 16px, 20px)
+      h1, h2
+        f-size('thin', 28px, 36px)
+        margin rem(25px 0 16px)
+      h3
+        f-size('roman', 22px, 36px)
+        margin rem(25px 0 16px)
+        color red
+      p
+        margin rem(16px 0)
+      a
+        text-decoration underline
+        &:hover
+          text-decoration none
+      img
+        max-width 100%!important
+        height auto!important
+        vertical-align middle
     &__feedback
       height rem(350px)
       background #515556

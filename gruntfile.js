@@ -46,11 +46,11 @@ module.exports = function(grunt) {
 
   grunt.registerTask('public', [
                      'bower_concat',
+                     'copy:public',
                      'publicTemplates',
                      'publicScripts',
                      'publicStyles',
-                     'image',
-                     'copy:public'
+                     'image'
                     ]);
 
   grunt.registerTask('publicScripts', [

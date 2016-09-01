@@ -3,7 +3,8 @@ module.exports = {
     options: {
       separator: ';',
     },
-    src: ['public/javascripts/vendor.js',
+    src: ['public/javascripts/sanitize-html.js',
+          'public/javascripts/vendor.js',
           'public/javascripts/app.templates.js',
           'public/javascripts/app.js'],
     dest: 'public/javascripts/application.js'

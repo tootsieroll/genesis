@@ -37,6 +37,12 @@ module.exports = {
       cwd: 'bower_components/jquery/dist/',
       src: ['jquery.min.js'],
       dest: 'public/javascripts/'
+    },
+    {
+      expand: true,
+      cwd: 'assets/javascripts/vendor/',
+      src: ['*.js'],
+      dest: 'public/javascripts/'
     }]
   }
 };

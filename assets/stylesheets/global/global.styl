@@ -47,6 +47,8 @@ h1, h2, h3, h4, strong
 
 article
 
+  f-size('roman', 16px, 20px)
+
   h1, h2
     f-size('thin', 28px, 36px)
     margin rem(25px 0 16px)
@@ -54,6 +56,7 @@ article
   h3
     f-size('roman', 22px, 36px)
     margin rem(25px 0 16px)
+    color red
 
   p
     margin rem(16px 0)
@@ -62,6 +65,11 @@ article
     text-decoration underline
     &:hover
       text-decoration none
+
+  img
+    max-width 100%!important
+    height auto!important
+    vertical-align middle
 
 
 
