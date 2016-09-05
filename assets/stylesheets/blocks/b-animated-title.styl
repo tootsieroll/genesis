@@ -1,0 +1,119 @@
+.b-animated-title
+  width rem(400px)
+  margin-top rem(85px)
+  margin-left rem(120px)
+  text-align right
+
+  button
+    background none
+    appearence none
+    border 1px solid red
+    color white
+    f-size('roman', 16px, 60px)
+    height rem(60px)
+    padding rem(0 15px)
+    transform translate3d(rem(22px), 0, 0)
+    margin-top rem(25px)
+    opacity 0
+    animation animated-title1-at4 700ms 2300ms linear forwards
+    cursor pointer
+
+.animated-title1
+  text-align left
+  .at0
+    opacity 0
+    f-size('roman', 61px, 50px)
+    animation animated-title1-at0 700ms 700ms linear forwards
+  .at1
+    opacity 0
+    f-size('thin', 44px, 44px)
+    transform translate3d(percent(60px, 400px), 0, 0)
+    animation animated-title1-at1 700ms 1000ms linear forwards
+  .at2
+    opacity 0
+    f-size('roman', 51px, 51px)
+    transform translate3d(percent(60px, 400px), 0, 0)
+    animation animated-title1-at2 700ms 1300ms linear forwards
+  .at3
+    opacity 0
+    f-size('roman', 37px, 30px)
+    transform translate3d(- percent(40px, 400px), 0, 0)
+    animation animated-title1-at3 700ms 1600ms linear forwards
+  .at4
+    opacity 0
+    f-size('thin', 50px, 50px)
+    transform translate3d(percent(57px, 400px), 0, 0)
+    animation animated-title1-at4 700ms 1900ms linear forwards
+
+.animated-title2
+  width rem(570px)
+  margin-top rem(204px)
+  margin-left rem(140px)
+  .at0
+    opacity 0
+    f-size('medium', 65px, 65px)
+    display inline-block
+    margin-right rem(30px)
+    animation animated-title2-at0 700ms 2600ms linear forwards
+  .at1
+    opacity 0
+    f-size('thin', 65px, 65px)
+    display inline-block
+    animation animated-title2-at1 700ms 2900ms linear forwards
+  .at2
+    opacity 0
+    f-size('medium', 36px, 36px)
+    text-align right
+    animation animated-title2-at2 700ms 3100ms linear forwards
+
+@keyframes animated-title1-at0
+  0%
+    opacity 0
+    transform translate3d(- percent(10px, 400px), 0, 0)
+  100%
+    opacity 1
+    transform translate3d(0%, 0, 0)
+@keyframes animated-title1-at1
+  0%
+    opacity 0
+    transform translate3d(percent(60px, 400px), 0, 0)
+  100%
+    opacity 1
+    transform translate3d(percent(80px, 400px), 0, 0)
+@keyframes animated-title1-at2
+  0%
+    opacity 0
+    transform translate3d(percent(60px, 400px), 0, 0)
+  100%
+    opacity 1
+    transform translate3d(percent(32px, 400px), 0, 0)
+@keyframes animated-title1-at3
+  0%
+    opacity 0
+    transform translate3d(- percent(40px, 400px), 0, 0)
+  100%
+    opacity 1
+    transform translate3d(- percent(30px, 400px), 0, 0)
+@keyframes animated-title1-at4
+  0%
+    opacity 0
+  100%
+    opacity 1
+
+@keyframes animated-title2-at0
+  0%
+    opacity 0
+  100%
+    opacity 1
+@keyframes animated-title2-at1
+  0%
+    opacity 0
+  100%
+    opacity 1
+@keyframes animated-title2-at2
+  0%
+    opacity 0
+    transform translate3d(- percent(10px, 400px), 0, 0)
+  100%
+    opacity 1
+    transform translate3d(0%, 0, 0)

@@ -20,6 +20,12 @@ module.exports = {
     },
     {
       expand: true,
+      cwd: 'public/video/',
+      src: ['**'],
+      dest: 'build/video/'
+    },
+    {
+      expand: true,
       cwd: 'public/javascripts/',
       src: ['jquery.min.js'],
       dest: 'build/javascripts/'
@@ -31,6 +37,12 @@ module.exports = {
       cwd: 'assets/fonts/',
       src: ['*.{eot,svg,ttf,woff,woff2}'],
       dest: 'public/fonts/'
+    },
+    {
+      expand: true,
+      cwd: 'assets/video/',
+      src: ['*.{mp4,webm}'],
+      dest: 'public/video/'
     },
     {
       expand: true,

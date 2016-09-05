@@ -15,12 +15,18 @@ body
   width 100%
   -webkit-tap-highlight-color rgba(0, 0, 0, 0)
   font-family: 'HelveticaNeueCyr', font-stack('Helvetica')
-  background url("/images/bg.jpg") no-repeat center top
-  background-size cover
-  background-attachment fixed
-  color black
+  color white
+  background black
 
   f-size('roman', 16px, 20px)
+
+  background url("/images/bg-projects.jpg") no-repeat center top
+  background-size cover
+  background-attachment fixed
+
+  &.production
+    background-image url("/images/bg.jpg")
+    color black
 
 
 *:focus, *:active
@@ -72,7 +78,24 @@ article
     vertical-align middle
 
 
+.video-background
+  position fixed
+  top 0
+  left 0
+  right 0
+  bottom 0
+  overflow hidden
+  display none
+  video
+    min-width 100%
+    min-height 100%
+    position absolute
+    left 50%
+    top 50%
+    transform translate3d(-50%, -50%, 0)
 
+  @media all and (min-width: $screen-md)
+    display block
 
 
 

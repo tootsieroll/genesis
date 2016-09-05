@@ -11,7 +11,7 @@ module.exports = {
       watchTask: true,
       server: {
         baseDir: "./public",
-        middleware: [ require('connect-history-api-fallback')() ]
+        // middleware: [ require('connect-history-api-fallback')() ]
       }
     }
   },
@@ -27,7 +27,7 @@ module.exports = {
       watchTask: true,
       server: {
         baseDir: "./build",
-        middleware: [ require('connect-history-api-fallback')() ]
+        // middleware: [ require('connect-history-api-fallback')() ]
       }
     }
   }

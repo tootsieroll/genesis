@@ -1,0 +1,189 @@
+.b-projects
+
+  width rem(789px)
+  height rem(789px)
+
+  padding rem(90px 160px)
+
+  box-sizing content-box
+
+  &-description
+    width rem(570px)
+    margin-top rem(192px)
+    margin-left rem(140px)
+    display none
+    .b-project__descr
+      display none
+      f-size('roman', 17px, 24px)
+      h2
+        f-size('thin', 48px, 48px)
+        margin-bottom rem(20px)
+      p
+        padding-left rem(18px)
+        border-left 1px solid red
+        margin-left rem(-18px)
+        max-width rem(460px)
+      &.selected
+        display block
+
+  &-list
+    background url("/images/bg-projects-list.png") no-repeat center
+    background-size 100% auto
+
+    width 100%
+    height 100%
+
+    display block
+    position relative
+    z-index 2
+
+    &__item
+
+      .b-project__bg
+        position absolute
+        top 50%
+        left 50%
+        transform translate3d(-50%, -50%, 0) rotate(-45deg)
+        width rem(276px)
+        height rem(276px)
+        border-radius 0%
+        background #467486
+        z-index -1
+        display none
+        overflow hidden
+        border-radius 0%
+        transition border-radius 200ms linear
+        &:before
+          content ''
+          display block
+          position absolute
+          top 50%
+          left 50%
+          width rem(394px)
+          height rem(394px)
+          background url("/images/bg-project.png") no-repeat center
+          background-size cover
+          transform translate3d(-50%, -50%, 0) rotate(45deg)
+        > a
+          display inline-block
+          position absolute
+          top 50%
+          left 50%
+          transform translate3d(-50%, -50%, 0)
+
+
+      &.selected
+        .b-project__bg
+          display block
+          animation project-bg-animation 100ms 100ms linear forwards
+          border-radius 50%
+          &:before
+            animation project-bgb-animation 100ms 100ms linear forwards
+
+      .b-project__name
+        position absolute
+        top 50%
+        left 50%
+        text-align center
+        width rem(140px)
+        transition all 120ms ease-in-out
+        cursor pointer
+        f-size('roman', 20px, 24px)
+        z-index 5
+        small
+          f-size('roman', 16px, 20px)
+          display block
+      &.all .b-project__name
+        z-index 1
+
+      &:nth-child(1) .b-project__name
+        transform translate3d(-50%, -50%, 0)
+        &:hover
+          transform translate3d(-50%, -50%, 0) scale(1.1,1.1)
+      &:nth-child(2) .b-project__name
+        top 0
+        left 50%
+        transform translate3d(-50%, -125%, 0)
+        &:hover
+          transform translate3d(-50%, -125%, 0) scale(1.1,1.1)
+      &:nth-child(3) .b-project__name
+        top 25%
+        left 25%
+        transform translate3d(-150%, -325%, 0)
+        &:hover
+          transform translate3d(-150%, -325%, 0) scale(1.1,1.1)
+      &:nth-child(4) .b-project__name
+        top 50%
+        left 0
+        transform translate3d(-100%, -50%, 0)
+        &:hover
+          transform translate3d(-100%, -50%, 0) scale(1.1,1.1)
+      &:nth-child(5) .b-project__name
+        top 75%
+        left 25%
+        transform translate3d(-150%, 250%, 0)
+        &:hover
+          transform translate3d(-150%, 250%, 0) scale(1.1,1.1)
+      &:nth-child(6) .b-project__name
+        top 100%
+        transform translate3d(-50%, 25%, 0)
+        &:hover
+          transform translate3d(-50%, 25%, 0) scale(1.1,1.1)
+      &:nth-child(7) .b-project__name
+        top 75%
+        left 75%
+        transform translate3d(50%, 250%, 0)
+        &:hover
+          transform translate3d(50%, 250%, 0) scale(1.1,1.1)
+      &:nth-child(8) .b-project__name
+        top 50%
+        left 100%
+        transform translate3d(0, -50%, 0)
+        &:hover
+          transform translate3d(0, -50%, 0) scale(1.1,1.1)
+      &:nth-child(9) .b-project__name
+        top 25%
+        left 75%
+        transform translate3d(50%, -325%, 0)
+        &:hover
+          transform translate3d(50%, -325%, 0) scale(1.1,1.1)
+
+      .icon
+        display inline-block
+        background-repeat no-repeat
+        background-position  0 0
+        background-size 100% auto
+
+        &-all
+          width rem(40px)
+          height rem(40px)
+          background-image url('/images/all.png')
+          margin-bottom rem(8px)
+          margin-top rem(26px)
+        &-next
+          width rem(76px)
+          height rem(76px)
+          background-image url('/images/arrow.png')
+
+
+@keyframes project-bg-animation
+  0%
+    width rem(276px)
+    height rem(276px)
+    transform translate3d(-50%, -50%, 0) rotate(-45deg)
+    z-index -1
+  100%
+    width rem(710px)
+    height rem(710px)
+    border-radius 50%
+    transform translate3d(-50%, -50%, 0) rotate(0deg)
+    z-index 3
+@keyframes project-bgb-animation
+  0%
+    width rem(394px)
+    height rem(394px)
+    transform translate3d(-50%, -50%, 0) rotate(45deg)
+  100%
+    width rem(710px)
+    height rem(710px)
+    transform translate3d(-50%, -50%, 0) rotate(0deg)

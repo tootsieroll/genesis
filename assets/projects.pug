@@ -1,0 +1,199 @@
+doctype html
+html
+  head
+    title Genesis
+    base(href="/")
+    meta(charset="utf-8")
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel="stylesheet" type="text/css" href="/stylesheets/application.css")
+    script(src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js")
+    script
+      | window.jQuery || document.write('<script src="/javascripts/jquery.min.js"><\/script>');
+    script(src="/javascripts/application.js")
+  body.projects
+    .video-background
+      video.video(src="/video/bg.webm" playsinline="" autoplay="" muted="" loop="")
+      .mask
+    header.l-header
+      .l-header__inner.s-grid
+        .s-col.s-grid
+          h1.logotype
+            a(href="/") Genesis
+          .page-title Проекты
+        nav.l-nav.l-nav-horizontal.l-header__menu.s-col
+          ul.menu
+            li.item
+              a.link(href="javascript:;") Партнерам
+            li.item.selected
+              a.link(href="javascript:;") Застройщикам
+            li.item
+              a.link(href="javascript:;") Строителям
+            li.item
+              a.link(href="javascript:;") Девелоперам
+        .l-nav.l-nav-horizontal.l-header__social.s-col
+          ul.menu
+            li.item
+              a(href="javascript:;")
+                i.s-icon.s-icon-twitter Twitter
+            li.item
+              a(href="javascript:;")
+                i.s-icon.s-icon-linkedin LinkedIn
+            li.item
+              a(href="javascript:;")
+                i.s-icon.s-icon-facebook Facebook
+            li.item
+              a(href="javascript:;")
+                i.s-icon.s-icon-vkontakte Vkontakte
+            li.item
+              a(href="javascript:;")
+                i.s-icon.s-icon-google Google +
+    aside.l-sidebar
+      .l-sidebar__inner
+        .l-sidebar__top
+          a.menu-button(href="javascript:;")
+            i.s-icon.s-icon-menu
+            | Меню
+        .l-nav.l-nav-vertical.l-sidebar__menu
+          ul.menu
+            li.item
+              a(href="javascript:;")
+                i.s-icon.s-icon-search Поиск
+            li.item
+              a(href="javascript:;")
+                i.s-icon.s-icon-question Вопросы
+            li.item
+              a(href="javascript:;")
+                i.s-icon.s-icon-note Заметки
+            li.item
+              a(href="javascript:;")
+                i.s-icon.s-icon-info Информация
+            li.item
+              a(href="javascript:;")
+                i.s-icon.s-icon-megaphone Отзывы
+            li.item
+              a(href="javascript:;")
+                i.s-icon.s-icon-camera Видео
+            li.item
+              a(href="javascript:;")
+                i.s-icon.s-icon-phone Контакты
+            li.item
+              a(href="javascript:;")
+                i.s-icon.s-icon-location Карта
+        .l-sidebar__phone
+          a.phone(href="javascript:;")
+            | 8 (800)
+            strong  555-04-00
+    main.l-content
+      .s-grid.vline-top
+        .s-col
+          .b-animated-title
+            h2.animated-title1
+              .at0 Вы можете
+              .at1 выбрать
+              .at2 готовый проект
+              .at3 или заказать
+              .at4 индивидуальный
+            button Заказать проект
+          h3.animated-title2
+            .at0 Выберите
+            .at1 группу
+            .at2 проектов
+          .b-projects-description
+            article#descr1.b-project__descr
+              h2 Жилые дома до 3-x этажей
+              p Мы осуществляем весь комплекс работ, связанных с проектированием социальных объектов. Подготовка документации ведется с учетом индивидуальных требований Заказчика, требований санитарных норм и пожарной безопасности
+            article#descr2.b-project__descr
+              h2 Жилые дома 3-5 этажей
+              p Мы осуществляем весь комплекс работ, связанных с проектированием социальных объектов. Подготовка документации ведется с учетом индивидуальных требований Заказчика, требований санитарных норм и пожарной безопасности
+            article#descr3.b-project__descr
+              h2 Жилые дома 5-9 этажей
+              p Мы осуществляем весь комплекс работ, связанных с проектированием социальных объектов. Подготовка документации ведется с учетом индивидуальных требований Заказчика, требований санитарных норм и пожарной безопасности
+            article#descr4.b-project__descr
+              h2 Жилые дома от 9 этажей
+              p Мы осуществляем весь комплекс работ, связанных с проектированием социальных объектов. Подготовка документации ведется с учетом индивидуальных требований Заказчика, требований санитарных норм и пожарной безопасности
+            article#descr5.b-project__descr
+              h2 Промышленные объекты
+              p Мы осуществляем весь комплекс работ, связанных с проектированием социальных объектов. Подготовка документации ведется с учетом индивидуальных требований Заказчика, требований санитарных норм и пожарной безопасности
+            article#descr6.b-project__descr.selected
+              h2 Социальные объекты
+              p Мы осуществляем весь комплекс работ, связанных с проектированием социальных объектов. Подготовка документации ведется с учетом индивидуальных требований Заказчика, требований санитарных норм и пожарной безопасности
+            article#descr7.b-project__descr
+              h2 Коттеджи и МАФ
+              p Мы осуществляем весь комплекс работ, связанных с проектированием социальных объектов. Подготовка документации ведется с учетом индивидуальных требований Заказчика, требований санитарных норм и пожарной безопасности
+            article#descr8.b-project__descr
+              h2 Коммерческие объекты
+              p Мы осуществляем весь комплекс работ, связанных с проектированием социальных объектов. Подготовка документации ведется с учетом индивидуальных требований Заказчика, требований санитарных норм и пожарной безопасности
+        .s-col
+          .b-projects
+            ul#projects.b-projects-list
+              li.b-projects-list__item.b-project.all
+                a(href="/catalogue.html")
+                  .b-project__name
+                    i.icon.icon-all
+                    small Все проекты
+              li.b-projects-list__item.b-project(data-tab="#descr1")
+                .b-project__name
+                  | Жилые дома
+                  small до 3-x этажей
+                .b-project__bg
+                  a(href="/group.html")
+                    i.icon.icon-next
+              li.b-projects-list__item.b-project(data-tab="#descr2")
+                .b-project__name
+                  | Жилые дома
+                  small 3-5 этажей
+                .b-project__bg
+                  a(href="/group.html")
+                    i.icon.icon-next
+              li.b-projects-list__item.b-project(data-tab="#descr3")
+                .b-project__name
+                  | Жилые дома
+                  small 5-9 этажей
+                .b-project__bg
+                  a(href="/group.html")
+                    i.icon.icon-next
+              li.b-projects-list__item.b-project(data-tab="#descr4")
+                .b-project__name
+                  | Жилые дома
+                  small от 9 этажей
+                .b-project__bg
+                  a(href="/group.html")
+                    i.icon.icon-next
+              li.b-projects-list__item.b-project(data-tab="#descr5")
+                .b-project__name Промышленные объекты
+                .b-project__bg
+                  a(href="/group.html")
+                    i.icon.icon-next
+              li.b-projects-list__item.b-project(data-tab="#descr6")
+                .b-project__name Социальные объекты
+                .b-project__bg
+                  a(href="/group.html")
+                    i.icon.icon-next
+              li.b-projects-list__item.b-project(data-tab="#descr7")
+                .b-project__name Коттеджи и МАФ
+                .b-project__bg
+                  a(href="/group.html")
+                    i.icon.icon-next
+              li.b-projects-list__item.b-project(data-tab="#descr8")
+                .b-project__name Коммерческие объекты
+                .b-project__bg
+                  a(href="/group.html")
+                    i.icon.icon-next
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

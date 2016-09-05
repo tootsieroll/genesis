@@ -21,6 +21,23 @@ $(document).ready ->
 
   $('#text-block').html clean
 
+  $('#projects li .b-project__name').on 'click', (e) ->
+    e.preventDefault()
+    parent = $(this).parent('li')
+    tab = parent.data('tab')
+    if parent.hasClass 'selected'
+      parent.removeClass 'selected'
+      $(tab).removeClass 'selected'
+      $('.animated-title2').show()
+      $('.b-projects-description').hide()
+      return
+    $('.animated-title2').hide()
+    $('.b-projects-description').show()
+    $('.b-projects-description .b-project__descr').removeClass('selected')
+    $(tab).addClass('selected')
+    parent.addClass('selected').siblings().removeClass('selected')
+
+
 $(window).resize ->
   $(":root").css "font-size", ($(window).width() * 100) / 1920 + '%'
   $(".b-text").css "height", $(window).height() - $(".l-header").height()
