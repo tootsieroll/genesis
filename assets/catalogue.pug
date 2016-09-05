@@ -1,0 +1,304 @@
+doctype html
+html
+  head
+    title Genesis
+    base(href="/")
+    meta(charset="utf-8")
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel="stylesheet" type="text/css" href="/stylesheets/application.css")
+    script(src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js")
+    script
+      | window.jQuery || document.write('<script src="/javascripts/jquery.min.js"><\/script>');
+    script(src="/javascripts/application.js")
+  body.projects
+    .video-background
+      video.video(src="/video/bg.webm" playsinline="" autoplay="" muted="" loop="")
+      .mask
+    header.l-header
+      .l-header__inner.s-grid
+        .s-col.s-grid
+          h1.logotype
+            a(href="/") Genesis
+          .page-title Проекты
+        nav.l-nav.l-nav-horizontal.l-header__menu.s-col
+          ul.menu
+            li.item
+              a.link(href="javascript:;") Партнерам
+            li.item.selected
+              a.link(href="/projects.html") Застройщикам
+            li.item
+              a.link(href="javascript:;") Строителям
+            li.item
+              a.link(href="javascript:;") Девелоперам
+        .l-nav.l-nav-horizontal.l-header__social.s-col
+          ul.menu
+            li.item
+              a(href="javascript:;")
+                i.s-icon.s-icon-twitter Twitter
+            li.item
+              a(href="javascript:;")
+                i.s-icon.s-icon-linkedin LinkedIn
+            li.item
+              a(href="javascript:;")
+                i.s-icon.s-icon-facebook Facebook
+            li.item
+              a(href="javascript:;")
+                i.s-icon.s-icon-vkontakte Vkontakte
+            li.item
+              a(href="javascript:;")
+                i.s-icon.s-icon-google Google +
+    aside.l-sidebar
+      .l-sidebar__inner
+        .l-sidebar__top
+          a.menu-button(href="javascript:;")
+            i.s-icon.s-icon-menu
+            | Меню
+        .l-nav.l-nav-vertical.l-sidebar__menu
+          ul.menu
+            li.item
+              a(href="javascript:;")
+                i.s-icon.s-icon-search Поиск
+            li.item
+              a(href="javascript:;")
+                i.s-icon.s-icon-question Вопросы
+            li.item
+              a(href="javascript:;")
+                i.s-icon.s-icon-note Заметки
+            li.item
+              a(href="javascript:;")
+                i.s-icon.s-icon-info Информация
+            li.item
+              a(href="javascript:;")
+                i.s-icon.s-icon-megaphone Отзывы
+            li.item
+              a(href="javascript:;")
+                i.s-icon.s-icon-camera Видео
+            li.item
+              a(href="javascript:;")
+                i.s-icon.s-icon-phone Контакты
+            li.item
+              a(href="javascript:;")
+                i.s-icon.s-icon-location Карта
+        .l-sidebar__phone
+          a.phone(href="javascript:;")
+            | 8 (800)
+            strong  555-04-00
+    main.l-content
+
+      .b-catalogue
+
+        .b-catalogue__main
+          .b-catalogue__main-column.image
+            .b-catalogue__main-image
+              div(style="background-image: url('/images/project.jpg')")
+          .b-catalogue__main-column.descr
+            .b-catalogue__main-descr
+              article
+                h2 Коттеджи Genesis
+                p Проекты частных домов и коттеджи построенные по технологии Genesis® – это удобно, практично, качественно, быстро! Технология Genesis® как никакая другая подходит для строительства современного дома, причем вне зависимости от бюджета. Будь то эконом, бизнес или элит исполнение. Использование ЛСТК дает разнообразие возможностей архитектурно-планировочных решений. Вы можете создать свой, индивидуальный проект.
+                p Полная совместимость отделочных и строительных материалов позволит Вам воплотить в жизнь Ваши самые смелые фантазии, дизайнерские идеи и решения. Вы не ограничены в выборе облицовочных фасадных систем, с помощью которых можно сделать дом как в классическом стиле, так и дом в стиле хай-тек, а может быть вы давно мечтали о доме в стиле модерн - и это тоже возможно!
+        .b-catalogue__content
+          .b-catalogue__list
+            a.b-catalogue__list-item(href="/project.html")
+              .image(style="background-image: url('/images/catalogue/1.png')")
+                .info
+                  | S общ. = 500 м
+                  sup 2
+                  br
+                  | Высота 6 м
+                  br
+                  | Кол-во эт. 2
+              .name
+                | Проект Генезис
+                br
+                | Т-79
+            a.b-catalogue__list-item(href="/project.html")
+              .image(style="background-image: url('/images/catalogue/2.png')")
+                .info
+                  | S общ. = 500 м
+                  sup 2
+                  br
+                  | Высота 6 м
+                  br
+                  | Кол-во эт. 2
+              .name
+                | Проект Генезис
+                br
+                | Т-79
+            a.b-catalogue__list-item(href="/project.html")
+              .image(style="background-image: url('/images/catalogue/3.png')")
+                .info
+                  | S общ. = 500 м
+                  sup 2
+                  br
+                  | Высота 6 м
+                  br
+                  | Кол-во эт. 2
+              .name
+                | Проект Генезис
+                br
+                | Т-79
+            a.b-catalogue__list-item(href="/project.html")
+              .image(style="background-image: url('/images/catalogue/4.png')")
+                .info
+                  | S общ. = 500 м
+                  sup 2
+                  br
+                  | Высота 6 м
+                  br
+                  | Кол-во эт. 2
+              .name
+                | Проект Генезис
+                br
+                | Т-79
+            a.b-catalogue__list-item(href="/project.html")
+              .image(style="background-image: url('/images/catalogue/5.png')")
+                .info
+                  | S общ. = 500 м
+                  sup 2
+                  br
+                  | Высота 6 м
+                  br
+                  | Кол-во эт. 2
+              .name
+                | Проект Генезис
+                br
+                | Т-79
+            a.b-catalogue__list-item(href="/project.html")
+              .image(style="background-image: url('/images/catalogue/6.png')")
+                .info
+                  | S общ. = 500 м
+                  sup 2
+                  br
+                  | Высота 6 м
+                  br
+                  | Кол-во эт. 2
+              .name
+                | Проект Генезис
+                br
+                | Т-79
+            a.b-catalogue__list-item(href="/project.html")
+              .image(style="background-image: url('/images/catalogue/7.png')")
+                .info
+                  | S общ. = 500 м
+                  sup 2
+                  br
+                  | Высота 6 м
+                  br
+                  | Кол-во эт. 2
+              .name
+                | Проект Генезис
+                br
+                | Т-79
+            a.b-catalogue__list-item(href="/project.html")
+              .image(style="background-image: url('/images/catalogue/8.png')")
+                .info
+                  | S общ. = 500 м
+                  sup 2
+                  br
+                  | Высота 6 м
+                  br
+                  | Кол-во эт. 2
+              .name
+                | Проект Генезис
+                br
+                | Т-79
+            a.b-catalogue__list-item(href="/project.html")
+              .image(style="background-image: url('/images/catalogue/9.png')")
+                .info
+                  | S общ. = 500 м
+                  sup 2
+                  br
+                  | Высота 6 м
+                  br
+                  | Кол-во эт. 2
+              .name
+                | Проект Генезис
+                br
+                | Т-79
+            a.b-catalogue__list-item(href="/project.html")
+              .image(style="background-image: url('/images/catalogue/10.png')")
+                .info
+                  | S общ. = 500 м
+                  sup 2
+                  br
+                  | Высота 6 м
+                  br
+                  | Кол-во эт. 2
+              .name
+                | Проект Генезис
+                br
+                | Т-79
+            a.b-catalogue__list-item(href="/project.html")
+              .image(style="background-image: url('/images/catalogue/11.png')")
+                .info
+                  | S общ. = 500 м
+                  sup 2
+                  br
+                  | Высота 6 м
+                  br
+                  | Кол-во эт. 2
+              .name
+                | Проект Генезис
+                br
+                | Т-79
+            a.b-catalogue__list-item(href="/project.html")
+              .image(style="background-image: url('/images/catalogue/12.png')")
+                .info
+                  | S общ. = 500 м
+                  sup 2
+                  br
+                  | Высота 6 м
+                  br
+                  | Кол-во эт. 2
+              .name
+                | Проект Генезис
+                br
+                | Т-79
+            a.b-catalogue__list-item(href="/project.html")
+              .image(style="background-image: url('/images/catalogue/13.png')")
+                .info
+                  | S общ. = 500 м
+                  sup 2
+                  br
+                  | Высота 6 м
+                  br
+                  | Кол-во эт. 2
+              .name
+                | Проект Генезис
+                br
+                | Т-79
+            a.b-catalogue__list-item(href="/project.html")
+              .image(style="background-image: url('/images/catalogue/14.png')")
+                .info
+                  | S общ. = 500 м
+                  sup 2
+                  br
+                  | Высота 6 м
+                  br
+                  | Кол-во эт. 2
+              .name
+                | Проект Генезис
+                br
+                | Т-79
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

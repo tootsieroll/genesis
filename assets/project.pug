@@ -1,0 +1,111 @@
+doctype html
+html
+  head
+    title Genesis
+    base(href="/")
+    meta(charset="utf-8")
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel="stylesheet" type="text/css" href="/stylesheets/application.css")
+    script(src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js")
+    script
+      | window.jQuery || document.write('<script src="/javascripts/jquery.min.js"><\/script>');
+    script(src="/javascripts/application.js")
+  body.projects
+    .video-background
+      video.video(src="/video/bg.webm" playsinline="" autoplay="" muted="" loop="")
+      .mask
+    header.l-header
+      .l-header__inner.s-grid
+        .s-col.s-grid
+          h1.logotype
+            a(href="/") Genesis
+          .page-title Проекты
+        nav.l-nav.l-nav-horizontal.l-header__menu.s-col
+          ul.menu
+            li.item
+              a.link(href="javascript:;") Партнерам
+            li.item.selected
+              a.link(href="/projects.html") Застройщикам
+            li.item
+              a.link(href="javascript:;") Строителям
+            li.item
+              a.link(href="javascript:;") Девелоперам
+        .l-nav.l-nav-horizontal.l-header__social.s-col
+          ul.menu
+            li.item
+              a(href="javascript:;")
+                i.s-icon.s-icon-twitter Twitter
+            li.item
+              a(href="javascript:;")
+                i.s-icon.s-icon-linkedin LinkedIn
+            li.item
+              a(href="javascript:;")
+                i.s-icon.s-icon-facebook Facebook
+            li.item
+              a(href="javascript:;")
+                i.s-icon.s-icon-vkontakte Vkontakte
+            li.item
+              a(href="javascript:;")
+                i.s-icon.s-icon-google Google +
+    aside.l-sidebar
+      .l-sidebar__inner
+        .l-sidebar__top
+          a.menu-button(href="javascript:;")
+            i.s-icon.s-icon-menu
+            | Меню
+        .l-nav.l-nav-vertical.l-sidebar__menu
+          ul.menu
+            li.item
+              a(href="javascript:;")
+                i.s-icon.s-icon-search Поиск
+            li.item
+              a(href="javascript:;")
+                i.s-icon.s-icon-question Вопросы
+            li.item
+              a(href="javascript:;")
+                i.s-icon.s-icon-note Заметки
+            li.item
+              a(href="javascript:;")
+                i.s-icon.s-icon-info Информация
+            li.item
+              a(href="javascript:;")
+                i.s-icon.s-icon-megaphone Отзывы
+            li.item
+              a(href="javascript:;")
+                i.s-icon.s-icon-camera Видео
+            li.item
+              a(href="javascript:;")
+                i.s-icon.s-icon-phone Контакты
+            li.item
+              a(href="javascript:;")
+                i.s-icon.s-icon-location Карта
+        .l-sidebar__phone
+          a.phone(href="javascript:;")
+            | 8 (800)
+            strong  555-04-00
+    main.l-content
+
+      .b-ellipse-slider.b-ellipse-slider__right
+        .b-ellipse-slider__images
+          div(style="background-image: url('/images/slider/2.png')")
+        .b-ellipse-slider__pages
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

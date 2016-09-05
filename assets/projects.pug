@@ -25,7 +25,7 @@ html
             li.item
               a.link(href="javascript:;") Партнерам
             li.item.selected
-              a.link(href="javascript:;") Застройщикам
+              a.link(href="/projects.html") Застройщикам
             li.item
               a.link(href="javascript:;") Строителям
             li.item
@@ -127,10 +127,9 @@ html
           .b-projects
             ul#projects.b-projects-list
               li.b-projects-list__item.b-project.all
-                a(href="/catalogue.html")
-                  .b-project__name
-                    i.icon.icon-all
-                    small Все проекты
+                a.b-project__name(href="/catalogue.html")
+                  i.icon.icon-all
+                  small Все проекты
               li.b-projects-list__item.b-project(data-tab="#descr1")
                 .b-project__name
                   | Жилые дома

@@ -1,0 +1,60 @@
+.b-ellipse-slider
+  position fixed
+  top 0
+  left 0
+  right 0
+  bottom 0
+  z-index 3
+  overflow hidden
+
+  &__images
+    width rem(1570px)
+    height rem(1570px)
+    overflow hidden
+    border-radius 50%
+
+    background alpha(black, .35)
+
+    position absolute
+    top 0
+    left 0
+    transform translate3d(rem(-450px), rem(-250px), 0)
+
+    div
+      width rem(1120px)
+      height 100vh
+      background url("/images/slider/1.png") no-repeat center
+      background-size cover
+      position absolute
+      top rem(250px)
+      left rem(450px)
+
+
+  &__pages
+    width rem(1621px)
+    height rem(1621px)
+    border-radius 50%
+
+    position absolute
+    top 0
+    left 0
+    transform translate3d(rem(-475px), rem(-275px), 0)
+
+    background url("/images/ellipse.svg") no-repeat center
+    background-size 100% auto
+
+.b-ellipse-slider__right
+  .b-ellipse-slider
+    &__images
+      left auto
+      right 0
+      transform translate3d(rem(450px), rem(-250px), 0)
+      div
+        left auto
+        right rem(450px)
+        background url("/images/slider/2.png") no-repeat center
+    &__pages
+      left auto
+      right 0
+      transform translate3d(rem(475px), rem(-275px), 0)
+

@@ -22,7 +22,7 @@ $(document).ready ->
   $('#text-block').html clean
 
   $('#projects li .b-project__name').on 'click', (e) ->
-    e.preventDefault()
+    # e.preventDefault()
     parent = $(this).parent('li')
     tab = parent.data('tab')
     if parent.hasClass 'selected'

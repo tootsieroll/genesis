@@ -1,0 +1,112 @@
+.b-catalogue
+
+  &__main
+    display flex
+    flex-flow row wrap
+    justify-content flex-start
+    align-items flex-start
+    position relative
+
+    &-image
+      width rem(1385px)
+      height rem(1385px)
+      border-radius 100%
+      border rem(8px) solid white
+
+      transform translate3d(rem(-400px), rem(-504px), 0)
+      background alpha(black, .35)
+      overflow hidden
+
+      > div
+        width 100%
+        height 100%
+        background-repeat no-repeat
+        background-position 0 0
+        background-size cover
+        transform translate3d(rem(300px), rem(400px), 0)
+
+    &-column
+
+      &.image
+        max-width rem(985px)
+        max-height rem(900px)
+
+    &-descr
+      padding-top rem(48px)
+      padding-left rem(105px)
+      article
+        max-width rem(640px)
+        f-size('roman', 18px, 30px)
+        h2
+          f-size('thin', 36px, 36px)
+          margin-bottom rem(42px)
+        p
+          margin 0
+
+  &__content
+    position relative
+    margin 0 auto
+    max-width rem(1300px)
+
+  &__list
+    display flex
+    flex-flow row wrap
+    justify-content center
+    align-items center
+    position relative
+
+    margin rem(30px 0 60px)
+
+    &-item
+      display block
+      flex-basis 25%
+      text-align center
+      margin rem(23px 0)
+      transition all 300ms $base-timing-function
+      position relative
+      &:nth-child(7n-0), &:nth-child(7n-1), &:nth-child(7n-2)
+        flex-basis 27%
+      .name
+        f-size('thin', 18px, 24px)
+      .image
+        width rem(260px)
+        height rem(260px)
+        border-radius 50%
+        background-repeat no-repeat
+        background-position center
+        background-size cover
+        margin 0 auto
+        border rem(6px) solid white
+        box-shadow rem(0 0 18px) alpha(black, .1)
+        margin-bottom rem(16px)
+        position relative
+        display table
+      .info
+        background alpha(black, .84)
+        border-radius 50%
+        display table-cell
+        text-align center
+        vertical-align middle
+        opacity 0
+        transition all 300ms $base-timing-function
+        f-size('thin', 20px, 28px)
+
+      &:hover
+        transform scale(1.3, 1.3)
+
+        .info
+          opacity 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
