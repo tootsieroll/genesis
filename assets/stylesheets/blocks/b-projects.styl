@@ -1,11 +1,21 @@
 .b-projects
 
-  width rem(789px)
-  height rem(789px)
+  display flex
+  flex-flow row wrap
+  justify-content flex-start
+  align-items flex-start
+  position relative
 
-  padding rem(90px 160px)
+  &-title
+  &-content
 
-  box-sizing content-box
+    &__inner
+      width rem(789px)
+      height rem(789px)
+
+      padding rem(90px 160px)
+
+      box-sizing content-box
 
   &-description
     width rem(570px)
@@ -75,10 +85,18 @@
       &.selected
         .b-project__bg
           display block
-          animation project-bg-animation 100ms 100ms linear forwards
+          // animation project-bg-animation 100ms 100ms linear forwards
           border-radius 50%
+          width rem(710px)
+          height rem(710px)
+          border-radius 50%
+          transform translate3d(-50%, -50%, 0) rotate(0deg)
+          z-index 3
           &:before
-            animation project-bgb-animation 100ms 100ms linear forwards
+            // animation project-bgb-animation 100ms 100ms linear forwards
+            width rem(710px)
+            height rem(710px)
+            transform translate3d(-50%, -50%, 0) rotate(0deg)
 
       .b-project__name
         position absolute
