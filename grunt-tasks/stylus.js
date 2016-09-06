@@ -2,7 +2,7 @@ module.exports = {
   default: {
     options: {
       compress: false,
-      import: ['/Users/dina/src/genesis/assets/stylesheets/base/index.styl'],
+      import: [__dirname + '/../assets/stylesheets/base/index.styl'],
       urlfunc: 'data-uri',
       use: [require( "kouto-swiss" )]
     },
