@@ -6,14 +6,13 @@
   align-items flex-start
   position relative
 
-  &-title
   &-content
 
     &__inner
       width rem(789px)
       height rem(789px)
 
-      padding rem(90px 160px)
+      padding rem(90px)
 
       box-sizing content-box
 
@@ -29,9 +28,6 @@
         f-size('thin', 48px, 48px)
         margin-bottom rem(20px)
       p
-        padding-left rem(18px)
-        border-left 1px solid red
-        margin-left rem(-18px)
         max-width rem(460px)
       &.selected
         display block
@@ -111,60 +107,33 @@
         small
           f-size('roman', 16px, 20px)
           display block
+
       &.all .b-project__name
         z-index 1
+        transform translate(-50%, -50%)
+        &:hover
+          transform translate(-50%, -50%) scale(1.1,1.1)
 
-      &:nth-child(1) .b-project__name
-        transform translate3d(-50%, -50%, 0)
-        &:hover
-          transform translate3d(-50%, -50%, 0) scale(1.1,1.1)
-      &:nth-child(2) .b-project__name
-        top 0
-        left 50%
-        transform translate3d(-50%, -125%, 0)
-        &:hover
-          transform translate3d(-50%, -125%, 0) scale(1.1,1.1)
-      &:nth-child(3) .b-project__name
-        top 25%
-        left 25%
-        transform translate3d(-150%, -325%, 0)
-        &:hover
-          transform translate3d(-150%, -325%, 0) scale(1.1,1.1)
-      &:nth-child(4) .b-project__name
-        top 50%
-        left 0
-        transform translate3d(-100%, -50%, 0)
-        &:hover
-          transform translate3d(-100%, -50%, 0) scale(1.1,1.1)
-      &:nth-child(5) .b-project__name
-        top 75%
-        left 25%
-        transform translate3d(-150%, 250%, 0)
-        &:hover
-          transform translate3d(-150%, 250%, 0) scale(1.1,1.1)
-      &:nth-child(6) .b-project__name
-        top 100%
-        transform translate3d(-50%, 25%, 0)
-        &:hover
-          transform translate3d(-50%, 25%, 0) scale(1.1,1.1)
-      &:nth-child(7) .b-project__name
-        top 75%
-        left 75%
-        transform translate3d(50%, 250%, 0)
-        &:hover
-          transform translate3d(50%, 250%, 0) scale(1.1,1.1)
-      &:nth-child(8) .b-project__name
-        top 50%
-        left 100%
-        transform translate3d(0, -50%, 0)
-        &:hover
-          transform translate3d(0, -50%, 0) scale(1.1,1.1)
-      &:nth-child(9) .b-project__name
-        top 25%
-        left 75%
-        transform translate3d(50%, -325%, 0)
-        &:hover
-          transform translate3d(50%, -325%, 0) scale(1.1,1.1)
+
+      radius = rem(460px)
+      step = 45
+      angle = 360
+      for child in (2..9)
+        &:nth-child({child}) .b-project__name
+          angle = angle - (child * step)
+          y = radius * math(radians(angle), 'sin')
+          x = radius * math(radians(angle), 'cos')
+          transform translate(-50%, -50%) translate(x, y)
+          if child is 2
+            transform translate(-50%, 0) translate(x, y)
+          if child is 6
+            transform translate(-50%, -100%) translate(x, y)
+          &:hover
+            transform translate(-50%, -50%) translate(x, y) scale(1.1,1.1)
+            if child is 2
+              transform translate(-50%, 0) translate(x, y) scale(1.1,1.1)
+            if child is 6
+              transform translate(-50%, -100%) translate(x, y) scale(1.1,1.1)
 
       .icon
         display inline-block
@@ -183,6 +152,44 @@
           height rem(76px)
           background-image url('/images/arrow.png')
 
+
+.b-project-current, .b-project-group
+  height 100vh
+  overflow hidden
+  position relative
+
+.b-project-about
+  padding rem(160px 0 70px 160px)
+  width 50%
+  max-width rem(560px)
+  f-size('roman', 18px, 30px)
+  h1
+    f-size('thin', 55px, 55px)
+  &__data
+    width 100%
+    margin rem(40px 0)
+    td
+      border-bottom 1px solid black
+    tr:last-child td
+      border 0
+
+article.bordered
+  padding-left rem(18px)
+  border-left 1px solid red
+  margin-left rem(-18px)
+  margin-bottom rem(30px)
+
+button.button-red
+  background none
+  appearence none
+  border 1px solid red
+  color white
+  f-size('roman', 16px, 60px)
+  height rem(60px)
+  padding rem(0 15px)
+  cursor pointer
+  &:hover
+    background red
 
 @keyframes project-bg-animation
   0%

@@ -88,3 +88,49 @@ $container-md = $container-desktop
 $container-large-desktop = 1140px + $grid-gutter-width
 //** For `$screen-lg-min` and up.
 $container-lg = $container-large-desktop
+
+
+
+
+
+
+
+
+
+
+
+
+
+pi = 3.14159265359
+
+factorial(n)
+  if n is 1
+    n
+  else
+    n * factorial(n - 1)
+
+radians(n)
+  n * pi / 180
+
+raise(n, x)
+  if x is 1
+    n
+  else
+    n * raise(n, x - 1)
+
+taylor(n, x)
+ raise(n, x) / factorial(x)
+
+sin(n)
+  (n - (((((((taylor(n, 3) + taylor(n, 5)) - taylor(n, 7)) + taylor(n, 9)) - taylor(n, 11)) + taylor(n, 13)) - taylor(n, 15)) + taylor(n, 17)))
+
+cos(n)
+  (n - (((((((taylor(n, 2) + taylor(n, 4)) - taylor(n, 6)) + taylor(n, 8)) - taylor(n, 10)) + taylor(n, 12)) - taylor(n, 14)) + taylor(n, 16)))
+
+tan(n)
+  sin(n) / cos(n)
+
+
+
+
+

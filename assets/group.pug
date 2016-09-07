@@ -10,7 +10,7 @@ html
     script
       | window.jQuery || document.write('<script src="/javascripts/jquery.min.js"><\/script>');
     script(src="/javascripts/application.js")
-  body.projects
+  body.group
     .video-background
       video.video(src="/video/bg.webm" playsinline="" autoplay="" muted="" loop="")
       .mask
@@ -84,15 +84,39 @@ html
             | 8 (800)
             strong  555-04-00
     main.l-content
+      section.b-project-group
+        #slider.b-ellipse-slider.b-ellipse-slider-mirror(data-active="1")
+          .b-ellipse-slider__pages-bg
+          #slider-images.b-ellipse-slider__images
+            .b-ellipse-slider__image.active
+              .image(style="background-image: url('/images/slider/1.png')")
+            .b-ellipse-slider__image
+              .image(style="background-image: url('/images/slider/2.png')")
+            .b-ellipse-slider__image
+              .image(style="background-image: url('/images/slider/1.png')")
+            .b-ellipse-slider__image
+              .image(style="background-image: url('/images/slider/2.png')")
+            .b-ellipse-slider__image
+              .image(style="background-image: url('/images/slider/1.png')")
+          ul#slider-pages.b-ellipse-slider__pages
+            li.b-ellipse-slider__page.active
+              span.name 01 | Школы
+              span.sc
+            li.b-ellipse-slider__page
+              span.name 02 | Детские сады
+              span.sc
+            li.b-ellipse-slider__page
+              span.name 03 | Пожарное депо
+              span.sc
+          #slider-controls.b-ellipse-slider__controls
+            a.prev(href="javascript:;")
+              i.icon.icon-arrow-up
+            a.next(href="javascript:;")
+              i.icon.icon-arrow-down
 
-      .b-ellipse-slider
-        .b-ellipse-slider__images
-          div(style="background-image: url('/images/slider/1.png')")
-        .b-ellipse-slider__pages
-
-      article.group-description
-        p Предлагаем Вам готовые типовые проекты детских садов по технологии ЛСТК, которые имеют положительное заключение Государственной экспертизы, а так же Вы можете заказать индивидуальный проект по Вашим требованиям, как по технологии ЛСТК, так и по технологии
-        a(href="/catalogue.html") Подробнее
+        article.group-description
+          p Предлагаем Вам готовые типовые проекты детских садов по технологии ЛСТК, которые имеют положительное заключение Государственной экспертизы, а так же Вы можете заказать индивидуальный проект по Вашим требованиям, как по технологии ЛСТК, так и по технологии
+          a(href="/catalogue.html") Подробнее
 
 
 

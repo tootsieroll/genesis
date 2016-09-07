@@ -37,6 +37,39 @@ $(document).ready ->
     $(tab).addClass('selected')
     parent.addClass('selected').siblings().removeClass('selected')
 
+  maxLength = $('#slider-pages li').length
+  nextPage = (page) ->
+    $('#slider').removeClass 'b-ellipse-slider__ready'
+    $('#slider-pages > li').removeClass 'active'
+    $('#slider-images > div').removeClass 'active'
+    $('#slider-controls a').removeClass 'hidden'
+    $('#slider').attr 'data-active', page
+    $('#slider-pages > li').eq(page - 1).addClass 'active'
+    $('#slider-images > div').eq(page - 1).addClass 'active'
+    $('#slider-controls a.prev').addClass('hidden') if page is 1
+    $('#slider-controls a.next').addClass('hidden') if page is maxLength
+    $(this).one 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', ->
+      $('#slider').addClass 'b-ellipse-slider__ready'
+
+
+  $('#slider-pages li').one 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', ->
+    $('#slider').addClass 'b-ellipse-slider__ready b-ellipse-slider__loaded'
+  $('#slider-pages li').on 'click', (e) ->
+    idx = $(this).index()
+    nextPage(idx+1)
+  $('#slider-controls a').on 'click', (e) ->
+    e.preventDefault()
+    link = $(this)
+    active = parseInt($('#slider').attr('data-active'))
+    if link.hasClass('prev')
+      return if active is 1
+      nextPage(active - 1)
+    if link.hasClass('next')
+      return if active is maxLength
+      nextPage(active + 1)
+
+
+
 
 $(window).resize ->
   $(":root").css "font-size", ($(window).width() * 100) / 1920 + '%'
