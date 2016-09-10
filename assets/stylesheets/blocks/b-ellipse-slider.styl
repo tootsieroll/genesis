@@ -3,8 +3,8 @@
   top 0
   right 0
   z-index 3
-  width rem(1570px)
-  height rem(1570px)
+  width rem(1000px)
+  height rem(1000px)
   margin-top - percent(185px, 1570px)
   margin-right - percent(450px, 1570px)
   border-radius 100%
@@ -13,6 +13,15 @@
   align-items center
 
   visibility hidden
+
+  @media all and (min-width: $screen-xs)
+    width rem(1300px)
+    height rem(1300px)
+  @media all and (min-width: $screen-sm)
+    width rem(1570px)
+    height rem(1570px)
+
+
 
   &.b-ellipse-slider__loaded
     visibility visible
@@ -75,25 +84,42 @@
       background white
       transition transform .3s linear
 
-  radius = rem(827px)
+  radius = rem(545px)
+  radius-xs = rem(696px)
+  radius-sm = rem(827px)
+
   step = 26
+
   for item in (1..14)
     &[data-active={'"' + item + '"'}]
       angle = 180 + (item * step)
       for child in (1..14)
         .b-ellipse-slider__page:nth-child({child})
           angle = angle - (child * step)
+
           y = radius * math(radians(angle), 'sin')
           x = radius * math(radians(angle), 'cos')
+
+          y-xs = radius-xs * math(radians(angle), 'sin')
+          x-xs = radius-xs * math(radians(angle), 'cos')
+
+          y-sm = radius-sm * math(radians(angle), 'sin')
+          x-sm = radius-sm * math(radians(angle), 'cos')
+
           transform translate(-50%, -50%) translate(x, y)
+          @media all and (min-width: $screen-xs)
+            transform translate(-50%, -50%) translate(x-xs, y-xs)
+          @media all and (min-width: $screen-sm)
+            transform translate(-50%, -50%) translate(x-sm, y-sm)
 
           radius1 = rem(30px)
           .sc
-            transform translate(0, -50%) rotate(angle deg)
+            transform translate(0%, -50%) rotate(angle deg)
           .name
             y1 = radius1 * math(radians(angle), 'sin')
             x1 = radius1 * math(radians(angle), 'cos')
             transform translate(-50%, -50%) translate(x1, y1)
+
 
   for item in (1..14)
     &.b-ellipse-slider-mirror[data-active={'"' + item + '"'}]
@@ -101,27 +127,39 @@
       for child in (1..14)
         .b-ellipse-slider__page:nth-child({child})
           angle = angle + (child * step)
+
           y = radius * math(radians(angle), 'sin')
           x = radius * math(radians(angle), 'cos')
+
+          y-xs = radius-xs * math(radians(angle), 'sin')
+          x-xs = radius-xs * math(radians(angle), 'cos')
+
+          y-sm = radius-sm * math(radians(angle), 'sin')
+          x-sm = radius-sm * math(radians(angle), 'cos')
+
           transform translate(-50%, -50%) translate(x, y)
+          @media all and (min-width: $screen-xs)
+            transform translate(-50%, -50%) translate(x-xs, y-xs)
+          @media all and (min-width: $screen-sm)
+            transform translate(-50%, -50%) translate(x-sm, y-sm)
 
           radius1 = rem(30px)
           .sc
-            transform translate(0, -50%) rotate(angle deg)
+            transform translate(0%, -50%) rotate(angle deg)
           .name
             y1 = radius1 * math(radians(angle), 'sin')
             x1 = radius1 * math(radians(angle), 'cos')
-            transform translate(100%, -50%) translate(rem(15px), 0) translate(x1, y1)
+            transform translate(100%, -50%) translate(rem(15px), 0px) translate(x1, y1)
 
   &__controls
     position absolute
     top 50%
     left 0
-    transform translate(-100%, -50%) translate(rem(-55px), 0)
+    transform translate(-100%, -50%) translate(rem(-55px), 0rem)
     .b-ellipse-slider-mirror &
       left auto
       right 0
-      transform translate(100%, -50%) translate(rem(55px), 0)
+      transform translate(100%, -50%) translate(rem(55px), 0rem)
     .b-ellipse-slider__ready &
       .prev, .next
         visibility visible
@@ -167,21 +205,39 @@
     width 100%
     overflow hidden
     border-radius 100%
+    border 1px solid transparent
+    z-index 10
     .image
       display block
+      width 100%
+      height 100%
       position absolute
       top 0
       left 0
-      width 100%
-      height 100%
-      border-radius 100%
+      z-index 2
       background-repeat no-repeat
       background-position center bottom
       background-size cover
 
       opacity 0
       transition opacity 500ms $base-timing-function
-
+      transform scale(1)
+      animation ellipse-slider-img-animation 16s linear infinite alternate
+      animation ellipse-slider-bg-animation 16s linear infinite alternate
   for item in (1..14)
     &[data-active={'"' + item + '"'}] .b-ellipse-slider__image:nth-child({item}) .image
       opacity 1
+
+
+
+@keyframes ellipse-slider-bg-animation
+  from
+    transform: scale(1)
+  to
+    transform: scale(1.2)
+
+@keyframes ellipse-slider-img-animation
+  from
+    transform: scale(1)
+  to
+    transform: scale(1.2)

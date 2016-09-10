@@ -1,8 +1,13 @@
 .b-animated-title
-  width rem(400px)
-  margin-top rem(85px)
-  margin-left rem(120px)
+  width rem(300px)
   text-align right
+
+  @media all and (min-width: $screen-xs)
+    width rem(400px)
+  @media all and (min-width: $screen-sm)
+    width rem(400px)
+    margin-top rem(85px)
+    margin-left rem(120px)
 
   button
     transform translate3d(rem(22px), 0, 0)
@@ -38,15 +43,27 @@
     animation animated-title1-at4 700ms 1900ms linear forwards
 
 .animated-title2
-  width rem(570px)
-  margin-top rem(204px)
-  margin-left rem(140px)
+  width rem(350px)
+  margin-top rem(100px)
+  visibility visible
+  @media all and (min-width: $screen-xs)
+    max-width rem(500px)
+    width 100%
+  @media all and (min-width: $screen-sm)
+    max-width 100%
+    width rem(570px)
+    margin-top rem(204px)
+    margin-left rem(140px)
+  &.hidden
+    visibility hidden
   .at0
     opacity 0
     f-size('medium', 65px, 65px)
     display inline-block
-    margin-right rem(30px)
+    margin-right rem(10px)
     animation animated-title2-at0 700ms 2600ms linear forwards
+    @media all and (min-width: $screen-sm)
+      margin-right rem(30px)
   .at1
     opacity 0
     f-size('thin', 65px, 65px)

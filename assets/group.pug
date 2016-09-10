@@ -10,7 +10,7 @@ html
     script
       | window.jQuery || document.write('<script src="/javascripts/jquery.min.js"><\/script>');
     script(src="/javascripts/application.js")
-  body.group
+  body.group.fixed-height
     .video-background
       video.video(src="/video/bg.webm" playsinline="" autoplay="" muted="" loop="")
       .mask
@@ -114,9 +114,16 @@ html
             a.next(href="javascript:;")
               i.icon.icon-arrow-down
 
-        article.group-description
-          p Предлагаем Вам готовые типовые проекты детских садов по технологии ЛСТК, которые имеют положительное заключение Государственной экспертизы, а так же Вы можете заказать индивидуальный проект по Вашим требованиям, как по технологии ЛСТК, так и по технологии
-          a.show-more(href="/catalogue.html") Подробнее
+        #slider-description.b-project-group__description(data-active="1")
+          article.group-description
+            p 1 Предлагаем Вам готовые типовые проекты детских садов по технологии ЛСТК, которые имеют положительное заключение Государственной экспертизы, а так же Вы можете заказать индивидуальный проект по Вашим требованиям, как по технологии ЛСТК, так и по технологии
+            a.show-more(href="/catalogue.html") Подробнее
+          article.group-description
+            p 2 Предлагаем Вам готовые типовые проекты детских садов по технологии ЛСТК, которые имеют положительное заключение Государственной экспертизы, а так же Вы можете заказать индивидуальный проект по Вашим требованиям, как по технологии ЛСТК, так и по технологии
+            a.show-more(href="/catalogue.html") Подробнее
+          article.group-description
+            p 3 Предлагаем Вам готовые типовые проекты детских садов по технологии ЛСТК, которые имеют положительное заключение Государственной экспертизы, а так же Вы можете заказать индивидуальный проект по Вашим требованиям, как по технологии ЛСТК, так и по технологии
+            a.show-more(href="/catalogue.html") Подробнее
 
 
 

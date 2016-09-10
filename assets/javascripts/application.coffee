@@ -1,5 +1,23 @@
 $(document).ready ->
   $(":root").css "font-size", ($(window).width() * 100) / 1920 + '%'
+
+  q = 1920/1080
+  c = $(window).width() / $(window).height()
+  if c > q
+    $(".l-content").css
+      '-webkit-transform' : 'scale(' + q/c + ',' + q/c + ')'
+      '-moz-transform'    : 'scale(' + q/c + ',' + q/c + ')'
+      '-ms-transform'     : 'scale(' + q/c + ',' + q/c + ')'
+      '-o-transform'      : 'scale(' + q/c + ',' + q/c + ')'
+      'transform'         : 'scale(' + q/c + ',' + q/c + ')'
+  else
+    $(".l-content").css
+      '-webkit-transform' : 'scale(1,1)'
+      '-moz-transform'    : 'scale(1,1)'
+      '-ms-transform'     : 'scale(1,1)'
+      '-o-transform'      : 'scale(1,1)'
+      'transform'         : 'scale(1,1)'
+
   $(".masonry-grid").masonry
     itemSelector: '.masonry-col'
   $(".b-text").css "height", $(window).height() - $(".l-header").height()
@@ -21,21 +39,22 @@ $(document).ready ->
 
   $('#text-block').html clean
 
-  $('#projects li .b-project__name').on 'click', (e) ->
-    # e.preventDefault()
-    parent = $(this).parent('li')
+  $('#projects .b-project').on('mouseenter', (e) ->
+    parent = $(this)
     tab = parent.data('tab')
-    if parent.hasClass 'selected'
-      parent.removeClass 'selected'
-      $(tab).removeClass 'selected'
-      $('.animated-title2').show()
-      $('.b-projects-description').hide()
-      return
-    $('.animated-title2').hide()
+    $('.animated-title2').addClass('hidden')
     $('.b-projects-description').show()
     $('.b-projects-description .b-project__descr').removeClass('selected')
     $(tab).addClass('selected')
     parent.addClass('selected').siblings().removeClass('selected')
+  ).on 'mouseleave', (e) ->
+    parent = $(this)
+    tab = parent.data('tab')
+    parent.removeClass 'selected'
+    $(tab).removeClass 'selected'
+    $('.animated-title2').removeClass('hidden')
+    $('.b-projects-description').hide()
+
 
   maxLength = $('#slider-pages li').length
   nextPage = (page) ->
@@ -44,6 +63,7 @@ $(document).ready ->
     $('#slider-images > div').removeClass 'active'
     $('#slider-controls a').removeClass 'hidden'
     $('#slider').attr 'data-active', page
+    $('#slider-description').attr 'data-active', page
     $('#slider-pages > li').eq(page - 1).addClass 'active'
     $('#slider-images > div').eq(page - 1).addClass 'active'
     $('#slider-controls a.prev').addClass('hidden') if page is 1
@@ -73,5 +93,22 @@ $(document).ready ->
 
 $(window).resize ->
   $(":root").css "font-size", ($(window).width() * 100) / 1920 + '%'
+  q = 1920/1080
+  c = $(window).width() / $(window).height()
+  if c > q
+    $(".l-content").css
+      '-webkit-transform' : 'scale(' + q/c + ',' + q/c + ')'
+      '-moz-transform'    : 'scale(' + q/c + ',' + q/c + ')'
+      '-ms-transform'     : 'scale(' + q/c + ',' + q/c + ')'
+      '-o-transform'      : 'scale(' + q/c + ',' + q/c + ')'
+      'transform'         : 'scale(' + q/c + ',' + q/c + ')'
+  else
+    $(".l-content").css
+      '-webkit-transform' : 'scale(1,1)'
+      '-moz-transform'    : 'scale(1,1)'
+      '-ms-transform'     : 'scale(1,1)'
+      '-o-transform'      : 'scale(1,1)'
+      'transform'         : 'scale(1,1)'
+
   $(".b-text").css "height", $(window).height() - $(".l-header").height()
 

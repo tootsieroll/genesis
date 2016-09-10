@@ -2,25 +2,52 @@
 
   display flex
   flex-flow row wrap
-  justify-content flex-start
-  align-items flex-start
+  justify-content center
+  align-items center
   position relative
+
+  margin-top rem(20px)
+  @media all and (min-width: $screen-xs)
+    margin-top 0
+  @media all and (min-width: $screen-sm)
+    justify-content flex-start
+    align-items flex-start
+  &-title
+    margin-right 5%
 
   &-content
 
     &__inner
-      width rem(789px)
-      height rem(789px)
-
-      padding rem(90px)
+      width rem(450px)
+      height rem(450px)
+      padding rem(45px)
 
       box-sizing content-box
 
+      @media all and (min-width: $screen-xs)
+        width rem(600px)
+        height rem(600px)
+        padding rem(60px)
+
+      @media all and (min-width: $screen-sm)
+        width rem(789px)
+        height rem(789px)
+        padding rem(90px)
+
   &-description
-    width rem(570px)
-    margin-top rem(192px)
-    margin-left rem(140px)
+    width rem(350px)
     display none
+    position absolute
+    top rem(350px)
+    @media all and (min-width: $screen-xs)
+      width rem(400px)
+      top rem(450px)
+    @media all and (min-width: $screen-sm)
+      position relative
+      top 0
+      width rem(570px)
+      margin-top rem(-130px)
+      margin-left rem(140px)
     .b-project__descr
       display none
       f-size('roman', 17px, 24px)
@@ -75,23 +102,35 @@
           position absolute
           top 50%
           left 50%
-          transform translate3d(-50%, -50%, 0)
+          transform translate3d(-50%, -50%, 0) rotate(45deg)
 
 
       &.selected
         .b-project__bg
           display block
-          // animation project-bg-animation 100ms 100ms linear forwards
           border-radius 50%
-          width rem(710px)
-          height rem(710px)
+          width rem(410px)
+          height rem(410px)
           border-radius 50%
-          transform translate3d(-50%, -50%, 0) rotate(0deg)
+          transform translate3d(-50%, -50%, 0%) rotate(0deg)
           z-index 3
-          &:before
-            // animation project-bgb-animation 100ms 100ms linear forwards
+          @media all and (min-width: $screen-xs)
+            width rem(535px)
+            height rem(535px)
+          @media all and (min-width: $screen-sm)
             width rem(710px)
             height rem(710px)
+          &:before
+            width rem(410px)
+            height rem(410px)
+            transform translate3d(-50%, -50%, 0%) rotate(0deg)
+            @media all and (min-width: $screen-xs)
+              width rem(535px)
+              height rem(535px)
+            @media all and (min-width: $screen-sm)
+              width rem(710px)
+              height rem(710px)
+          > a
             transform translate3d(-50%, -50%, 0) rotate(0deg)
 
       .b-project__name
@@ -99,7 +138,7 @@
         top 50%
         left 50%
         text-align center
-        width rem(140px)
+        width rem(120px)
         transition all 120ms ease-in-out
         cursor pointer
         f-size('roman', 20px, 24px)
@@ -107,6 +146,8 @@
         small
           f-size('roman', 16px, 20px)
           display block
+        @media all and (min-width: $screen-sm)
+          width rem(140px)
 
       &.all .b-project__name
         z-index 1
@@ -115,25 +156,51 @@
           transform translate(-50%, -50%) scale(1.1,1.1)
 
 
-      radius = rem(460px)
+      radius = rem(280px)
+      radius-xs = rem(350px)
+      radius-sm = rem(460px)
+
       step = 45
       angle = 360
       for child in (2..9)
         &:nth-child({child}) .b-project__name
           angle = angle - (child * step)
+
           y = radius * math(radians(angle), 'sin')
           x = radius * math(radians(angle), 'cos')
+
+          y-xs = radius-xs * math(radians(angle), 'sin')
+          x-xs = radius-xs * math(radians(angle), 'cos')
+
+          y-sm = radius-sm * math(radians(angle), 'sin')
+          x-sm = radius-sm * math(radians(angle), 'cos')
+
           transform translate(-50%, -50%) translate(x, y)
+          @media all and (min-width: $screen-xs)
+            transform translate(-50%, -50%) translate(x-xs, y-xs)
+          @media all and (min-width: $screen-sm)
+            transform translate(-50%, -50%) translate(x-sm, y-sm)
           if child is 2
-            transform translate(-50%, 0) translate(x, y)
+            top 0
+            transform translate(-50%, -125%)!important
+          if child is 4
+            left 0
+            transform translate(-100%, -50%)!important
           if child is 6
-            transform translate(-50%, -100%) translate(x, y)
+            top 100%
+            transform translate(-50%, 25%)!important
           &:hover
             transform translate(-50%, -50%) translate(x, y) scale(1.1,1.1)
+            @media all and (min-width: $screen-xs)
+              transform translate(-50%, -50%) translate(x-xs, y-xs) scale(1.1,1.1)
+            @media all and (min-width: $screen-sm)
+              transform translate(-50%, -50%) translate(x-sm, y-sm) scale(1.1,1.1)
             if child is 2
-              transform translate(-50%, 0) translate(x, y) scale(1.1,1.1)
+              transform translate(-50%, -125%) scale(1.1,1.1)!important
+            if child is 4
+              transform translate(-100%, -50%) scale(1.1,1.1)!important
             if child is 6
-              transform translate(-50%, -100%) translate(x, y) scale(1.1,1.1)
+              transform translate(-50%, 25%) scale(1.1,1.1)!important
 
       .icon
         display inline-block
@@ -152,26 +219,63 @@
           height rem(76px)
           background-image url('/images/arrow.png')
 
+.b-project-group
+  display flex
+  flex-flow row wrap
+  justify-content flex-end
+  align-items flex-start
+  position relative
 
-.b-project-current, .b-project-group
-  height 100vh
-  overflow hidden
+.b-project-current
+  display flex
+  flex-flow row wrap
+  justify-content flex-start
+  align-items flex-start
   position relative
 
 .b-project-about
-  padding rem(160px 0 70px 160px)
-  width 50%
-  max-width rem(560px)
+
   f-size('roman', 18px, 30px)
+
+  &__inner
+    width rem(360px)
+    padding rem(160px 0 70px 95px)
+
+    @media all and (min-width: $screen-xs)
+      width rem(460px)
+      padding rem(160px 0 70px 120px)
+    @media all and (min-width: $screen-sm)
+      width rem(560px)
+      padding rem(160px 0 70px 160px)
+
   h1
     f-size('thin', 55px, 55px)
   &__data
-    width 100%
-    margin rem(40px 0)
+    margin rem(40px -16px 40px -16px)
+    padding rem(16px)
+    position relative
+    &:before, &:after
+      content ''
+      display block
+      position absolute
+      left 0
+      right 0
+      height 50%
+      background url("/images/table-bg.png") no-repeat 0 0
+      background-size 100% auto
+      z-index -1
+    &:before
+      top 0
+    &:after
+      bottom 0
+      background-position left bottom
+    table
+      width 100%
     td
       border-bottom 1px solid black
     tr:last-child td
       border 0
+      padding-bottom 0
 
 article.bordered
   padding-left rem(18px)
@@ -192,13 +296,20 @@ button.button-red
     background red
 
 article.group-description
-  width 50%
-  max-width rem(400px)
-  right rem(110px)
-  bottom rem(130px)
-  position absolute
+  width rem(300px)
+  margin-right rem(10px)
+  margin-top rem(100px)
   z-index 10
   f-size('roman', 18px, 24px)
+  display none
+  @media all and (min-width: $screen-xs)
+    margin-top rem(670px)
+    margin-right rem(50px)
+    width rem(300px)
+  @media all and (min-width: $screen-sm)
+    margin-top rem(670px)
+    margin-right rem(100px)
+    width rem(400px)
   p
     margin-bottom rem(50px)
   .show-more
@@ -222,24 +333,7 @@ article.group-description
     &:hover
       color red
 
-@keyframes project-bg-animation
-  0%
-    width rem(276px)
-    height rem(276px)
-    transform translate3d(-50%, -50%, 0) rotate(-45deg)
-    z-index -1
-  100%
-    width rem(710px)
-    height rem(710px)
-    border-radius 50%
-    transform translate3d(-50%, -50%, 0) rotate(0deg)
-    z-index 3
-@keyframes project-bgb-animation
-  0%
-    width rem(394px)
-    height rem(394px)
-    transform translate3d(-50%, -50%, 0) rotate(45deg)
-  100%
-    width rem(710px)
-    height rem(710px)
-    transform translate3d(-50%, -50%, 0) rotate(0deg)
+for item in (1..14)
+  .b-project-group__description[data-active={'"' + item + '"'}] .group-description:nth-child({item})
+    display block
+

@@ -10,7 +10,7 @@ html
     script
       | window.jQuery || document.write('<script src="/javascripts/jquery.min.js"><\/script>');
     script(src="/javascripts/application.js")
-  body.projects
+  body.projects.fixed-height
     .video-background
       video.video(src="/video/bg.webm" playsinline="" autoplay="" muted="" loop="")
       .mask
@@ -141,50 +141,50 @@ html
                   i.icon.icon-all
                   small Все проекты
               li.b-projects-list__item.b-project(data-tab="#descr1")
-                .b-project__name
+                a.b-project__name(href="/group.html")
                   | Жилые дома
                   small до 3-x этажей
                 .b-project__bg
                   a(href="/group.html")
                     i.icon.icon-next
               li.b-projects-list__item.b-project(data-tab="#descr2")
-                .b-project__name
+                a.b-project__name(href="/group.html")
                   | Жилые дома
                   small 3-5 этажей
                 .b-project__bg
                   a(href="/group.html")
                     i.icon.icon-next
               li.b-projects-list__item.b-project(data-tab="#descr3")
-                .b-project__name
+                a.b-project__name(href="/group.html")
                   | Жилые дома
                   small 5-9 этажей
                 .b-project__bg
                   a(href="/group.html")
                     i.icon.icon-next
               li.b-projects-list__item.b-project(data-tab="#descr4")
-                .b-project__name
+                a.b-project__name(href="/group.html")
                   | Жилые дома
                   small от 9 этажей
                 .b-project__bg
                   a(href="/group.html")
                     i.icon.icon-next
               li.b-projects-list__item.b-project(data-tab="#descr5")
-                .b-project__name Промышленные объекты
+                a.b-project__name(href="/group.html") Промышленные объекты
                 .b-project__bg
                   a(href="/group.html")
                     i.icon.icon-next
               li.b-projects-list__item.b-project(data-tab="#descr6")
-                .b-project__name Социальные объекты
+                a.b-project__name(href="/group.html") Социальные объекты
                 .b-project__bg
                   a(href="/group.html")
                     i.icon.icon-next
               li.b-projects-list__item.b-project(data-tab="#descr7")
-                .b-project__name Коттеджи и МАФ
+                a.b-project__name(href="/group.html") Коттеджи и МАФ
                 .b-project__bg
                   a(href="/group.html")
                     i.icon.icon-next
               li.b-projects-list__item.b-project(data-tab="#descr8")
-                .b-project__name Коммерческие объекты
+                a.b-project__name(href="/group.html") Коммерческие объекты
                 .b-project__bg
                   a(href="/group.html")
                     i.icon.icon-next
