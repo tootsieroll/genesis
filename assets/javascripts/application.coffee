@@ -18,6 +18,8 @@ $(document).ready ->
       '-o-transform'      : 'scale(1,1)'
       'transform'         : 'scale(1,1)'
 
+  $('body').addClass 'has-slider' if $('#slider').length
+
   $(".masonry-grid").masonry
     itemSelector: '.masonry-col'
   $(".b-text").css "height", $(window).height() - $(".l-header").height()
@@ -57,7 +59,13 @@ $(document).ready ->
 
 
   maxLength = $('#slider-pages li').length
+  isScrolled = false
+
+  scrollTimeout = false
+  timeout = undefined
+
   nextPage = (page) ->
+    isScrolled = true
     $('#slider').removeClass 'b-ellipse-slider__ready'
     $('#slider-pages > li').removeClass 'active'
     $('#slider-images > div').removeClass 'active'
@@ -70,6 +78,8 @@ $(document).ready ->
     $('#slider-controls a.next').addClass('hidden') if page is maxLength
     $(this).one 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', ->
       $('#slider').addClass 'b-ellipse-slider__ready'
+      isScrolled = false
+
 
 
   $('#slider-pages li').one 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', ->
@@ -79,6 +89,7 @@ $(document).ready ->
     nextPage(idx+1)
   $('#slider-controls a').on 'click', (e) ->
     e.preventDefault()
+    return if isScrolled
     link = $(this)
     active = parseInt($('#slider').attr('data-active'))
     if link.hasClass('prev')
@@ -87,6 +98,25 @@ $(document).ready ->
     if link.hasClass('next')
       return if active is maxLength
       nextPage(active + 1)
+
+
+  $('body.has-slider').on 'mousewheel', (e) ->
+    return if isScrolled or scrollTimeout
+    scrollTimeout = true
+    active = parseInt($('#slider').attr('data-active'))
+
+    clearTimeout(timeout)
+    timeout = setTimeout ->
+      scrollTimeout = false
+    , 1000
+
+    if e.originalEvent.wheelDelta < 0
+      return if active is maxLength
+      nextPage(active + 1)
+    else
+      return if active is 1
+      nextPage(active - 1)
+    return false
 
 
 
