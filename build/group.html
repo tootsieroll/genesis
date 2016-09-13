@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Genesis</title>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/application.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/javascripts/jquery.min.js"><\/script>');</script>
+    <script src="/javascripts/application.js"></script>
+  </head>
+  <body class="group fixed-height">
+    <div class="video-background">
+      <video class="video" src="/video/bg.webm" playsinline="" autoplay="" muted="" loop=""></video>
+      <div class="mask"></div>
+    </div>
+    <header class="l-header">
+      <div class="l-header__inner s-grid">
+        <div class="s-col s-grid">
+          <h1 class="logotype"><a href="/">Genesis</a></h1>
+          <div class="page-title">Проекты</div>
+        </div>
+        <nav class="l-nav l-nav-horizontal l-header__menu s-col">
+          <ul class="menu">
+            <li class="item"><a class="link" href="javascript:;">Партнерам</a></li>
+            <li class="item selected"><a class="link" href="/projects.html">Застройщикам</a></li>
+            <li class="item"><a class="link" href="javascript:;">Строителям</a></li>
+            <li class="item"><a class="link" href="javascript:;">Девелоперам</a></li>
+          </ul>
+        </nav>
+        <div class="l-nav l-nav-horizontal l-header__social s-col">
+          <ul class="menu">
+            <li class="item"><a href="javascript:;"><i class="s-icon s-icon-twitter">Twitter</i></a></li>
+            <li class="item"><a href="javascript:;"><i class="s-icon s-icon-linkedin">LinkedIn</i></a></li>
+            <li class="item"><a href="javascript:;"><i class="s-icon s-icon-facebook">Facebook</i></a></li>
+            <li class="item"><a href="javascript:;"><i class="s-icon s-icon-vkontakte">Vkontakte</i></a></li>
+            <li class="item"><a href="javascript:;"><i class="s-icon s-icon-google">Google +</i></a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <aside class="l-sidebar">
+      <div class="l-sidebar__inner">
+        <div class="l-sidebar__top"><a class="menu-button" href="javascript:;"><i class="s-icon s-icon-menu"></i>Меню</a></div>
+        <div class="l-nav l-nav-vertical l-sidebar__menu">
+          <ul class="menu">
+            <li class="item"><a href="javascript:;"><i class="s-icon s-icon-search">Поиск</i></a></li>
+            <li class="item"><a href="javascript:;"><i class="s-icon s-icon-question">Вопросы</i></a></li>
+            <li class="item"><a href="javascript:;"><i class="s-icon s-icon-note">Заметки</i></a></li>
+            <li class="item"><a href="javascript:;"><i class="s-icon s-icon-info">Информация</i></a></li>
+            <li class="item"><a href="javascript:;"><i class="s-icon s-icon-megaphone">Отзывы</i></a></li>
+            <li class="item"><a href="javascript:;"><i class="s-icon s-icon-camera">Видео</i></a></li>
+            <li class="item"><a href="javascript:;"><i class="s-icon s-icon-phone">Контакты</i></a></li>
+            <li class="item"><a href="javascript:;"><i class="s-icon s-icon-location">Карта</i></a></li>
+          </ul>
+        </div>
+        <div class="l-sidebar__phone"><a class="phone" href="javascript:;">8 (800)<strong> 555-04-00</strong></a></div>
+      </div>
+    </aside>
+    <main class="l-content">
+      <section class="b-project-group">
+        <div class="b-ellipse-slider b-ellipse-slider-mirror" id="slider" data-active="1">
+          <div class="b-ellipse-slider__pages-bg"></div>
+          <div class="b-ellipse-slider__images" id="slider-images">
+            <div class="b-ellipse-slider__image active">
+              <div class="image" style="background-image: url('/images/slider/1.png')"></div>
+            </div>
+            <div class="b-ellipse-slider__image">
+              <div class="image" style="background-image: url('/images/slider/2.png')"></div>
+            </div>
+            <div class="b-ellipse-slider__image">
+              <div class="image" style="background-image: url('/images/slider/1.png')"></div>
+            </div>
+            <div class="b-ellipse-slider__image">
+              <div class="image" style="background-image: url('/images/slider/2.png')"></div>
+            </div>
+            <div class="b-ellipse-slider__image">
+              <div class="image" style="background-image: url('/images/slider/1.png')"></div>
+            </div>
+          </div>
+          <ul class="b-ellipse-slider__pages" id="slider-pages">
+            <li class="b-ellipse-slider__page active"><span class="name">01 | Школы</span><span class="sc"></span></li>
+            <li class="b-ellipse-slider__page"><span class="name">02 | Детские сады</span><span class="sc"></span></li>
+            <li class="b-ellipse-slider__page"><span class="name">03 | Пожарное депо</span><span class="sc"></span></li>
+          </ul>
+          <div class="b-ellipse-slider__controls" id="slider-controls"><a class="prev" href="javascript:;"><i class="icon icon-arrow-up"></i></a><a class="next" href="javascript:;"><i class="icon icon-arrow-down"></i></a></div>
+        </div>
+        <div class="b-project-group__description" id="slider-description" data-active="1">
+          <article class="group-description">
+            <p>1 Предлагаем Вам готовые типовые проекты детских садов по технологии ЛСТК, которые имеют положительное заключение Государственной экспертизы, а так же Вы можете заказать индивидуальный проект по Вашим требованиям, как по технологии ЛСТК, так и по технологии</p><a class="show-more" href="/catalogue.html">Подробнее</a>
+          </article>
+          <article class="group-description">
+            <p>2 Предлагаем Вам готовые типовые проекты детских садов по технологии ЛСТК, которые имеют положительное заключение Государственной экспертизы, а так же Вы можете заказать индивидуальный проект по Вашим требованиям, как по технологии ЛСТК, так и по технологии</p><a class="show-more" href="/catalogue.html">Подробнее</a>
+          </article>
+          <article class="group-description">
+            <p>3 Предлагаем Вам готовые типовые проекты детских садов по технологии ЛСТК, которые имеют положительное заключение Государственной экспертизы, а так же Вы можете заказать индивидуальный проект по Вашим требованиям, как по технологии ЛСТК, так и по технологии</p><a class="show-more" href="/catalogue.html">Подробнее</a>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
